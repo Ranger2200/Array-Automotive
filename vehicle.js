@@ -9,6 +9,7 @@ class Vehicle {
         this.mileage = mileage;
         this.started = false;
         this.numberOfWheels = 0;
+        this.fuel = 100
     }
 
     start() {
@@ -30,7 +31,7 @@ class Vehicle {
                 this.stop();
             }
         } else {
-            alert("You need to start the engine first.");
+            alert("Start Engine First.");
         }
     }
     decelerate() {
@@ -53,24 +54,10 @@ class Vehicle {
     }
     stop() {
         this.started = false;
+        console.log("engine off")
     }
 
-    drive() {
-        accelerate();
-    }
-    brake() {
-        decelerate();
-    }
-
-    autoPark()
-    {
-
-    }
-
-    autoDrive()
-    {
-      
-    }
+    
 
     typeOfVehicle(wheels) {
         if (this.numberOfWheels == 8 && 8 == wheels) {
